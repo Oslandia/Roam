@@ -47,7 +47,7 @@ class ListWidget(EditorWidget):
         if not filterexp and valuefieldindex == keyfieldindex:
             values = layer.uniqueValues(keyfieldindex)
             for value in values:
-                widget.addItem(value, value)
+                widget.addItem(unicode(value), value)
             return
 
         attributes = {keyfieldindex, valuefieldindex}
