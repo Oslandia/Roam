@@ -211,9 +211,10 @@ class MainWindow(mainwindow_widget, mainwindow_base):
 
         self.canvas_page.layout().insertWidget(2, self.projecttoolbar)
         self.dataentrymodel = QStandardItemModel(self)
-        self.dataentrycombo = QComboBox()
+        self.dataentrycombo = QComboBox(self.projecttoolbar)
         self.dataentrycombo.setIconSize(QSize(48,48))
-        self.dataentrycombo.setSizeAdjustPolicy(QComboBox.AdjustToContents)
+        self.dataentrycombo.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        self.dataentrycombo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
         self.dataentrycombo.setModel(self.dataentrymodel)
         self.dataentrycombo.currentIndexChanged.connect(self.dataentrychanged)
         self.dataentrycomboaction = self.projecttoolbar.insertWidget(self.topspaceraction, self.dataentrycombo)
