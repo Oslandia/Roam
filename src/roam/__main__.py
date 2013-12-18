@@ -37,7 +37,7 @@ if RUNNING_FROM_FILE:
     os.environ["GDAL_DRIVER_PATH"] = r"C:\OSGeo4W\bin\gdalplugins"
     os.environ["QT_PLUGIN_PATH"] = r"C:\OSGeo4W\apps\Qt4\plugins"
     prefixpath = r"C:\OSGeo4W\apps\qgis"
-    settingspath = os.path.join(apppath, "..", "settings.config")
+#    settingspath = os.path.join(apppath, "..", "settings.config")
 
 # We have to start this here or else the image drivers don't load for some reason
 app = QgsApplication(sys.argv, True)
